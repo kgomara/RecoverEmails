@@ -131,8 +131,9 @@ public class RecoverEmails {
 	
 	private static int recoverEmailnamesFromBackup(File file) {
 		BinaryPListParser plist  = new BinaryPListParser();
+		XMLElement xmlDoc;
 		try {
-			XMLElement xmlDoc = plist.parse(file);
+			xmlDoc = plist.parse(file);
 		} catch(IOException ex) {
 			ex.printStackTrace();
 			return 0;
